@@ -3,13 +3,16 @@ import FoodItem from "../components/FoodItem";
 import { db, collection, getDocs } from "../firebase/index";
 import "./MenuPage.css";
 import menu from "../assets/menu.png";
+import { useParams } from "react-router-dom";
 
 export default function MenuPage() {
   const [foodMenu, setFoodMenu] = useState([]);
 
+  const params = useParams();
+
   // get food menu
   const getMenu = async () => {
-    const querySnapshot = await getDocs(collection(db, "brijenma@gmail.com"));
+    const querySnapshot = await getDocs(collection(db, params.collectionName));
     setFoodMenu(
       querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
     );
