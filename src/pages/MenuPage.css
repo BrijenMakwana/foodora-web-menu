@@ -1,0 +1,32 @@
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu-image {
+  width: 200px;
+}
+
+.total-dishes {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+  color: #3c4048;
+}
+
+.menu-container {
+  background-color: #fff;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.loading-text {
+}
